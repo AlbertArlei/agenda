@@ -14,9 +14,9 @@ include('conexao.php');
     $horario = $form->horario;
     $procedimento = $form->procedimento;
     
-    $select = mysqli_query($conn, "SELECT dia, mes, horario FROM agenda WHERE dia = '$dia' AND mes = '$mes' AND horario = '$horario'");
+    $select = mysqli_query($conn, "SELECT dia, mes, horario FROM tabelaAgenda WHERE dia = '$dia' AND mes = '$mes' AND horario = '$horario'"); // mude "tabelaAgenda" para o nome da sua tabela em que esta a agenda
     if($select->num_rows > 0){
         exit();
     }
-    $create = mysqli_query($conn, "INSERT INTO agenda (id_usuario, dia, mes, horario, nome, numero, email, procedimento) VALUES ('$id', '$dia', '$mes', '$horario', '$nome', '$numero', '$email', '$procedimento')");
+    $create = mysqli_query($conn, "INSERT INTO tabelaAgenda (id_usuario, dia, mes, horario, nome, numero, email, procedimento) VALUES ('$id', '$dia', '$mes', '$horario', '$nome', '$numero', '$email', '$procedimento')"); // mude "tabelaAgenda" para o nome da sua tabela em que esta a agenda
     
