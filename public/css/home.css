@@ -1,0 +1,153 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#calendario-conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+#semana{
+    display: flex;
+    width: 90vw;
+}
+
+.dia-semana{
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+#calendario{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 7);
+    height: calc(100% / 5);
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.block:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+#chevron{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+}
+
+.fa-chevron-left, .fa-chevron-right{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.dia{
+    user-select: none;
+    pointer-events: none;
+}
+
+#agendamento-conteiner{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
+#agendamento-conteiner span{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#form-agendamento{
+    position: relative;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.checkbox-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+#form-agendamento input[type="checkbox" i]{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#procedimento{
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#confirmar-btn{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 208, 0);
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#confirmar-btn:hover{
+    background-color: rgb(196, 160, 0);
+}
+
+#titulo-conteiner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#titulo-conteiner .fa-chevron-left{
+    position: absolute;
+    left: 10px;
+}
+
+.circle-conteiner{
+    display: flex;
+    flex-direction: row;
+    pointer-events: none;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: green;
+}

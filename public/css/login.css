@@ -1,0 +1,45 @@
+#form-conteiner {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+#form-register,
+#form-login {
+    flex-direction: column;
+    width: 280px;
+    height: 350px;
+    gap: 10px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#form-register input,
+#form-login input {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 270px;
+    height: 30px;
+    padding: 10px;
+}
+
+#form-register input[type="submit" i],
+#form-login input[type="submit" i] {
+    padding: 0;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#criarConta, #login{
+    cursor: pointer;
+    transition: 200ms;
+}
+
+
+#login:hover, #criarConta:hover{
+    color: rgb(255, 208, 0);
+}

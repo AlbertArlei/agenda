@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('/public/font/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-ExtraLight';
+    src: url('/public/font/Inter-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/public/font/Inter-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter-regular';
+    font-size: 16px;
+}
+
+.esconder {
+    display: none;
+}
+
+.mostrar {
+    display: flex;
+}
+
+header {
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    display: flex;
+}
+
+header h1 a {
+    font-family: 'Inter-Bold';
+    color: black;
+    text-decoration: none;
+
+}
+
+header nav ul li {
+    display: block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav {
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+#account-container {
+    display: flex;
+    gap: 10px;
+}
+
+#account-container a {
+    color: black;
+    text-decoration: none;
+}
+
+.fa-bars {
+    display: none;
+}
+
+@media screen and (max-width: 620px) {
+    header {
+        position: relative;
+        justify-content: center;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    #account-container a {
+        display: none;
+    }
+
+    .fa-bars {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
